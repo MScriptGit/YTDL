@@ -32,3 +32,13 @@ def YTSearch():
         
     return listTitle, listDuration, listURL
 
+def YTDL(url):
+    yt = YouTube(url, on_progress_callback=on_progress)
+    ys = yt.streams.get_audio_only()
+    file_path = ys.download(output_path="temp/Download")
+    on_download_complete(file_path)
+
+def YTDownload():
+    url = input("Enter URL to download: ")
+
+    Thread(target=YTDL, args=(url,)).start()
