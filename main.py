@@ -1,5 +1,7 @@
 #Made by MScript 2025
 from pytubefix import Search
+from pytubefix import YouTube
+from threading import Thread
 
 print("To Search, enter '1'")
 print("To download audio, enter '2'")
