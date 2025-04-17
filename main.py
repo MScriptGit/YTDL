@@ -34,18 +34,18 @@ def YTDownload():
 
 def YTPlaylistDL():
     url = input("Enter URL to download audio from a playlist: ")
-	pl = Playlist(url)
-	prefixCounter = 1
-	PLprefix = ""
-	for video in pl.videos:
-	    if prefixCounter < 10:
-	    	PLprefix = "0" + str(prefixCounter) + ". "
-	    else:
-	    	PLprefix = "" + str(prefixCounter) + ". "
-	    ys = video.streams.get_audio_only()
-	    file_path = ys.download(output_path="temp/Downloaded_Playlists", filename_prefix=PLprefix)
-	    prefixCounter +=1
-	on_download_complete()
+    pl = Playlist(url)
+    prefixCounter = 1
+    PLprefix = ""
+    for video in pl.videos:
+        if prefixCounter < 10:
+	    PLprefix = "0" + str(prefixCounter) + ". "
+	else:
+	    PLprefix = "" + str(prefixCounter) + ". "
+	ys = video.streams.get_audio_only()
+	file_path = ys.download(output_path="temp/Downloaded_Playlists", filename_prefix=PLprefix)
+	prefixCounter +=1
+    on_download_complete()
 
 def on_progress(stream, chunk, bytes_remaining):
     filesize = stream.filesize
