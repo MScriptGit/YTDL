@@ -42,9 +42,9 @@ def YTPlaylistDL():
             PLprefix = "0" + str(prefixCounter) + ". "
         else:
             PLprefix = "" + str(prefixCounter) + ". "
-	ys = video.streams.get_audio_only()
-	file_path = ys.download(output_path="temp/Downloaded_Playlists", filename_prefix=PLprefix)
-	prefixCounter +=1
+        ys = video.streams.get_audio_only()
+        file_path = ys.download(output_path="temp/Downloaded_Playlists", filename_prefix=PLprefix)
+        prefixCounter +=1
     on_download_complete()
 
 def on_progress(stream, chunk, bytes_remaining):
