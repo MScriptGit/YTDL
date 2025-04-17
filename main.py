@@ -39,9 +39,9 @@ def YTPlaylistDL():
     PLprefix = ""
     for video in pl.videos:
         if prefixCounter < 10:
-	    PLprefix = "0" + str(prefixCounter) + ". "
+            PLprefix = "0" + str(prefixCounter) + ". "
         else:
-	    PLprefix = "" + str(prefixCounter) + ". "
+            PLprefix = "" + str(prefixCounter) + ". "
 	ys = video.streams.get_audio_only()
 	file_path = ys.download(output_path="temp/Downloaded_Playlists", filename_prefix=PLprefix)
 	prefixCounter +=1
