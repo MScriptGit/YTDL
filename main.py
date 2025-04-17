@@ -60,6 +60,7 @@ def on_progress(stream, chunk, bytes_remaining):
 def on_download_complete():
     print("Download voltooid!")
 
+st.write("Tadaaa!")
 
 print("To Search, enter '1'")
 print("To download audio, enter '2'")
