@@ -68,7 +68,7 @@ choice = input("Enter number of choice")
 
 if (choice == 1):
     YTSearch()
-else if (choice == 2):
+elif (choice == 2):
     YTDownload()
 else:
     YTPLDownload()
