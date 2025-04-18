@@ -6,8 +6,6 @@ from pytubefix import Playlist
 from pytubefix.cli import on_progress
 from threading import Thread
 
-st.write("huh? wat!?")
-
 def YTSearch():
     userInput = input("Enter Search terms: ")
   
@@ -62,7 +60,6 @@ def on_progress(stream, chunk, bytes_remaining):
 def on_download_complete():
     print("Download voltooid!")
 
-st.write("Tadaaa!")
 
 print("To Search, enter '1'")
 print("To download audio, enter '2'")
