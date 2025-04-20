@@ -67,6 +67,8 @@ st.write("To download audio from a playlist, enter '3'")
 
 st.text_input(label="Enter number of choice")
 
+st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
+
 choice = input("Enter number of choice")
 
 if (choice == 1):
