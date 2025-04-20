@@ -61,9 +61,11 @@ def on_download_complete():
     print("Download voltooid!")
 
 
-print("To Search, enter '1'")
-print("To download audio, enter '2'")
-print("To download audio from a playlist, enter '3'")
+st.write("To Search, enter '1'")
+st.write("To download audio, enter '2'")
+st.write("To download audio from a playlist, enter '3'")
+
+st.text_input(value="Enter number of choice")
 
 choice = input("Enter number of choice")
 
