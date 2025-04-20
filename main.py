@@ -60,11 +60,14 @@ def on_progress(stream, chunk, bytes_remaining):
 def on_download_complete():
     print("Download voltooid!")
 
-st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
+def btn_clicked():
+    st.write(choice)
+
+choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
 
 st.text_input(label="Enter keywords to search or URL to download")
 
-choice = input("Enter number of choice")
+st.button(label="Let's go!", on_click="btn_clicked")
 
 if (choice == 1):
     YTSearch()
