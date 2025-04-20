@@ -65,7 +65,7 @@ def btn_clicked():
 
 choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
 
-st.text_input(label="Enter keywords to search or URL to download")
+userInput = st.text_input(label="Enter keywords to search or URL to download")
 
 st.write("Button should be under this text!")
 
