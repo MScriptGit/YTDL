@@ -61,8 +61,8 @@ def on_download_complete():
     print("Download voltooid!")
 
 def btn_clicked():
-    st.write("choice= " + choice)
-    st.write("userInput= " + userInput)
+    st.write("choice= {choice}")
+    st.write("userInput= {userInput}")
 
 choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
 
