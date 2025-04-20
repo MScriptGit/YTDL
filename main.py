@@ -62,11 +62,17 @@ def on_download_complete():
 
 def btn_clicked():
     if (choice == "Search"):
-        YTSearch()
+        listTitle, listDuration, listURL = YTSearch(userInput)
+        for listTitle in listTitle
+            if st.button(listTitle):
+                st.success(f"You clicked on: {listTitle}")
     elif (choice == "Download Audio"):
         YTDownload()
     elif (choice == "Download Playlist"):
         YTPlaylistDL()
+    else:
+        return false
+        #add code to display input error
 
 choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
 
