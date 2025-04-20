@@ -77,4 +77,4 @@ if (choice == 1):
 elif (choice == 2):
     YTDownload()
 else:
-    YTPLDownload()
+    YTPlaylistDL()
