@@ -67,7 +67,7 @@ choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playli
 
 st.text_input(label="Enter keywords to search or URL to download")
 
-st.button(label="Let's go!", on_click="btn_clicked")
+st.button(label="Let's go!", on_click=btn_clicked)
 
 if (choice == 1):
     YTSearch()
