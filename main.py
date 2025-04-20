@@ -65,7 +65,7 @@ st.write("To Search, enter '1'")
 st.write("To download audio, enter '2'")
 st.write("To download audio from a playlist, enter '3'")
 
-st.text_input(value="Enter number of choice")
+st.text_input(label="Enter number of choice", value="Enter number of choice")
 
 choice = input("Enter number of choice")
 
