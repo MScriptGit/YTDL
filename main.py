@@ -60,14 +60,9 @@ def on_progress(stream, chunk, bytes_remaining):
 def on_download_complete():
     print("Download voltooid!")
 
-
-st.write("To Search, enter '1'")
-st.write("To download audio, enter '2'")
-st.write("To download audio from a playlist, enter '3'")
-
-st.text_input(label="Enter number of choice")
-
 st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
+
+st.text_input(label="Enter keywords to search or URL to download")
 
 choice = input("Enter number of choice")
 
