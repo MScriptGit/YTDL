@@ -61,20 +61,15 @@ def on_download_complete():
     print("Download voltooid!")
 
 def btn_clicked():
-    st.write(f"choice= {choice}")
-    st.write(f"userInput= {userInput}")
+    if (choice == 1):
+        YTSearch()
+    elif (choice == 2):
+        YTDownload()
+    else:
+        YTPlaylistDL()
 
 choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playlist"])
 
 userInput = st.text_input(label="Enter keywords to search or URL to download")
 
-st.write("Button should be under this text!")
-
 st.button(label="Let's go!", on_click=btn_clicked)
-
-if (choice == 1):
-    YTSearch()
-elif (choice == 2):
-    YTDownload()
-else:
-    YTPlaylistDL()
