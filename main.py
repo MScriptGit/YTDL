@@ -6,9 +6,7 @@ from pytubefix import Playlist
 from pytubefix.cli import on_progress
 from threading import Thread
 
-def YTSearch():
-    userInput = input("Enter Search terms: ")
-  
+def YTSearch(userInput):
     listTitle = []
     listDuration = []
     listURL = []
