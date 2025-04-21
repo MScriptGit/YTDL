@@ -84,6 +84,5 @@ st.button(label="Let's go!", on_click=btn_clicked)
 if 'search_results' in st.session_state:
     listTitle, listDuration, listURL = st.session_state.search_results
     for i, title in enumerate(listTitle):
-        label = f"{title}\n{listDuration[i]}"
-        if st.button(label):
-            st.success(YTDownload(listURL[i]))
+        label = f"{title} ; {listDuration[i]}"
+        st.button(label, on_click=YTDownload, args=(listURL[i],))
