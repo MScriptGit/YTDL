@@ -66,7 +66,7 @@ def btn_clicked():
             label = f"{x}/n{listDuration[i]}"
             if st.button(label):
                 st.success(f"You clicked on: {listTitle}")
-            i++
+            i += 1
     elif (choice == "Download Audio"):
         YTDownload()
     elif (choice == "Download Playlist"):
