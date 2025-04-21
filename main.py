@@ -61,9 +61,12 @@ def on_download_complete():
 def btn_clicked():
     if (choice == "Search"):
         listTitle, listDuration, listURL = YTSearch(userInput)
-        for listTitle in listTitle:
-            if st.button(listTitle):
+        i = 0
+        for x in listTitle:
+            label = f"{x}/n{listDuration[i]}"
+            if st.button(label):
                 st.success(f"You clicked on: {listTitle}")
+            i++
     elif (choice == "Download Audio"):
         YTDownload()
     elif (choice == "Download Playlist"):
