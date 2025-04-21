@@ -26,9 +26,7 @@ def YTDL(url):
     file_path = ys.download(output_path="Download")
     on_download_complete(file_path)
 
-def YTDownload():
-    url = input("Enter URL to download audio: ")
-
+def YTDownload(url):
     Thread(target=YTDL, args=(url,)).start()
 
 def YTPlaylistDL():
@@ -63,9 +61,9 @@ def btn_clicked():
         listTitle, listDuration, listURL = YTSearch(userInput)
         i = 0
         for x in listTitle:
-            label = f"{x}/n{listDuration[i]}"
+            label = f"{x}\n{listDuration[i]}"
             if st.button(label):
-                st.success(f"You clicked on: {listTitle}")
+                st.success(YTDownload(listUrl[i]))
             i += 1
     elif (choice == "Download Audio"):
         YTDownload()
