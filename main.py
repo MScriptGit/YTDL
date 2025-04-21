@@ -59,12 +59,13 @@ def on_download_complete():
 def btn_clicked():
     if (choice == "Search"):
         listTitle, listDuration, listURL = YTSearch(userInput)
-        i = 0
+        """i = 0
         for x in listTitle:
             label = f"{x}\n{listDuration[i]}"
             if st.button(label):
                 st.success(YTDownload(listUrl[i]))
-            i += 1
+            i += 1"""
+        st.session_state.search_results = (listTitle, listDuration, listURL)
     elif (choice == "Download Audio"):
         YTDownload()
     elif (choice == "Download Playlist"):
@@ -78,3 +79,11 @@ choice = st.radio("Choose option", ["Search", "Download Audio", "Download Playli
 userInput = st.text_input(label="Enter keywords to search or URL to download")
 
 st.button(label="Let's go!", on_click=btn_clicked)
+
+# Display search results if they exist in session state
+if 'search_results' in st.session_state:
+    listTitle, listDuration, listURL = st.session_state.search_results
+    for i, title in enumerate(listTitle):
+        label = f"{title}\n{listDuration[i]}"
+        if st.button(label):
+            st.success(YTDownload(listURL[i]))
